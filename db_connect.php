@@ -17,10 +17,7 @@ $host_name = $_SERVER['HTTP_HOST'];
 $is_live = (strpos($host_name, 'jafmarketplace.in') !== false);
 
 if ($is_live) {
-    $host = 'localhost';
-    $user = 'jafmarke_app'; 
-    $pass = 'Splender@84';           
-    $dbname = 'jafmarke_app'; 
+    include('../../../live_db_connect.php');
     $tbl_prefix = 'foodorder_';
 } else {
     $host = 'localhost';
